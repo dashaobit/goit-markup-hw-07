@@ -37,11 +37,11 @@ body {
   font-size: 26px;
   line-height: 1.19;
 }
-.page-header .logo-part {
+.page-header__logo-text {
   color: black;
 }
 
-.page-footer .logo-part {
+.page-footer__logo-text {
   color: #ffffff;
 }
 .list {
@@ -106,11 +106,11 @@ img {
   z-index: 1;
 }
 
-.header-container {
+.page-header__container {
   display: flex;
   align-items: center;
 }
-.header-nav {
+.page-header__nav {
   display: flex;
   align-items: center;
 }
@@ -118,28 +118,28 @@ img {
   display: flex;
   margin-left: 93px;
 }
-.icon-item-header {
+.contact-nav__item {
   display: flex;
   align-items: center;
 }
 
-.icon-header {
+.contact-nav__icon {
   fill: currentColor;
 }
 /* если цвет иконки  currentColor, как у родителя (как у ссылки), то цвет при ховере тоже наследуется*/
 
-.site-nav .item:not(:last-child) {
+.site-nav__item:not(:last-child) {
   margin-right: 50px;
 }
 .contact-nav .item:not(:last-child) {
   margin-right: 50px;
 }
 
-/* .site-nav .item:last-child{
+/* .site-nav__item:last-child{
   margin-right: 0;
  } */
 
-.site-nav .link {
+.site-nav__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -151,14 +151,22 @@ img {
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.site-nav .link.current {
+.site-nav__link--current {
   color: var(--acсent-text-color);
 }
-.site-nav .link:focus,
-.site-nav .link:hover {
+.site-nav__link:focus,
+.site-nav__link:hover {
   color: var(--acсent-text-color);
 }
-.contact-nav .link {
+
+.contact-nav {
+  display: flex;
+  margin-left: auto;
+}
+.contact-nav__link {
+  display: flex;
+  align-items: center;
+
   color: var(--primery-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -171,27 +179,19 @@ img {
   /* Для всех эффектов ховера и фокуса (цвет, фон, тень) сделаны переходы. Время - 250ms */
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact-nav .link:hover,
-.contact-nav .link:focus {
+.contact-nav__link:hover,
+.contact-nav__link:focus {
   color: var(--acсent-text-color); 
-}
-.contact-nav {
-  display: flex;
-  margin-left: auto;
 }
 header svg {
   margin-right: 10px;
 }
-.icon-item-header .link {
-  display: flex;
-  align-items: center;
-}
 
-/* подчеркивание текущей страницы */
-.link.current{
+/* подчеркивание полоска текущей страницы */
+.site-nav__link--current{
   position: relative;
 }
-.link.current::after {
+.site-nav__link--current::after {
   position: absolute;
   display: inline-block;
   content: '';
@@ -647,7 +647,7 @@ text-align: center;
 .logo-link {
   margin-bottom: 20px;
 }
-.footer-logo {
+.page-footer__logo {
   display: block;
   margin-bottom: 20px;
 }
@@ -662,32 +662,32 @@ text-align: center;
 }
 /* --------------footer icon------------ */
 
-.icon-container {
+.page-footer__container-icon {
   margin-left: 70px;
   font-weight: bold;
   line-height: 1.14;
   text-transform: uppercase;
   color: #ffffff;
 }
-.container-footer {
+.page-footer__container {
   display: flex;
   align-items: baseline;
 }
-.icon-list-footer {
+.page-footer__icon-list {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
-.icon-item-footer {
+.page-footer__icon-item {
   width: 44px;
   height: 44px;
   margin-right: 10px;
   
 }
-.icon-item-footer:last-child {
+.page-footer__icon-item:last-child {
   margin-right: 0;
 }
-.icon-link-footer {
+.page-footer__icon-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -698,34 +698,34 @@ text-align: center;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-link-footer:hover,
-.icon-link-footer:focus {
+.page-footer__icon-link:hover,
+.page-footer__icon-link:focus {
   background-color: var(--acсent-background-color);
 }
-.icon-footer {
+.page-footer__icon {
   width: 20px;
   height: 20px;
   align-items: baseline;
   fill: #ffffff;
 }
 /* --------------------подпишитесь------------------ */
-.subscribe-container{
+.page-footer__subscribe-container{
   display: flex;
   align-items: center;
   margin-top: 20px;
 }
-.subscribe-form{
+.page-footer__form{
   display: flex;
 }
-.btn-subscribe{
+.subscribe-btn{
   display: flex;
   align-items: center;
   margin-left: 12px;
 }
-.subscribe-icon{
+.page-footer__subscribe-icon{
   margin-left: 10px;
 }
-.subscribe-input{
+.page-footer__input{
 width: 358px;
 height: 50px;
 padding-left: 16px;
@@ -735,7 +735,7 @@ background-color: inherit;
 
 transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.subscribe-input:focus{
+.page-footer__input:focus{
   color: #ffffff;
 }
 /* ---------------------------portfolio--------------------- */
