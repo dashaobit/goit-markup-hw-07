@@ -6,5 +6,18 @@
 @import './base/common';
 
 //COMPONENTS
+@import './components/section';
+@import './components/button';
+@import './components/backdrop';
+@import './components/modal';
+@import './components/modal-form';
 
 //LAYOUT
+@import './layout/header';
+@import './layout/hero';
+@import './layout/feature';
+@import './layout/work';
+@import './layout/team';
+@import './layout/client';
+@import './layout/footer';
+@import './layout/portfolio';
