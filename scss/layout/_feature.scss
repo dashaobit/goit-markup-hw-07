@@ -1,4 +1,9 @@
-/* feature */
+.feature-list-title {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
 
 .feature-list {
   display: flex;
@@ -47,9 +52,4 @@
 .icon-astronaut::before {
   background-image: url(../images/astronaut.svg);
 } */
-.feature-list .title {
-  margin-bottom: 10px;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-}
+

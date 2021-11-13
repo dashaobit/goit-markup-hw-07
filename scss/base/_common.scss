@@ -8,34 +8,11 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.logo {
-  color:var(--acсent-text-color);
-  font-family: Raleway, arial;
-  font-size: 26px;
-  line-height: 1.19;
-}
-.page-header__logo-text {
-  color: black;
-}
-
-.page-footer__logo-text {
-  color: #ffffff;
-}
 .list {
   list-style: none;
 }
 a {
   text-decoration: none;
-}
-address {
-  font-style: normal;
-}
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
 }
 h1,
 h2,
@@ -53,7 +30,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
 .title {
   color: var(--title-text-color);
 }

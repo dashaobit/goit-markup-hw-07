@@ -1,13 +1,16 @@
-/* ------------------------- Модальное окно ---------------------- */
+// =========текст Оставьте свои данные
+.modal-box-text {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  text-align: center;
+}
 
-.modal-icon {
-  align-items: baseline;
-  width: 18px;
-  height: 18px;
-}
-textarea {
-  resize: none;
-}
+// =========форма
 .modal-form {
   width: 448px;
   margin-left: auto;
@@ -23,7 +26,7 @@ textarea {
 .form-field-forth {
   margin-bottom: 0;
 }
-.form-field label {
+.form-label {
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.17;
@@ -35,6 +38,17 @@ textarea {
   padding-left: 30px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  &:focus ~ .icon-modal {
+    fill: var(--primary-background-color);
+  }
+/* когда  .form-input в ховере, то все СОСЕДИ внизу него внутри div 
+(вниз на одном уровне) меняют цвет*/
+  &:focus {
+    border: 1px solid #2196f3;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 }
 .box-input {
   /* width: 100%;  */
@@ -51,32 +65,19 @@ textarea {
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-input:focus ~ .icon-modal {
-  fill: var(--primary-background-color);
-}
-/* когда  .form-input в ховере, то все СОСЕДИ внизу него внутри div (вниз на одном уровне) меняют цвет*/
-.form-input:focus {
-  border: 1px solid #2196f3;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.form-field textarea::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-.form-field textarea {
+
+// ==================поле Введите комментарий
+.form-textarea {
   padding: 12px 16px;
   height: 120px;
+  resize: none;
+
+    &::placeholder {
+      color: rgba(117, 117, 117, 0.5);
+  }
 }
-.modal-box-text {
-  display: block;
-  margin-bottom: 12px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: 0.03em;
-  color: var(--title-text-color);
-  text-align: center;
-}
+
+// ==================поле Соглашаюсь с Условиями договора
 .form-field-policy {
   display: flex;
   align-items: center;
@@ -88,13 +89,8 @@ textarea {
   text-decoration-line: underline;
   color: var(--acсent-text-color);
 }
-.form-field-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-/* квадратик Я соглашаюсь с Условиями договора */
+//============ квадратик Я соглашаюсь с Условиями договора
 .checkbox {
   position: absolute;
   appearance: none;
@@ -117,4 +113,11 @@ textarea {
   background-image: url(../images/check-icon.svg);
   background-size: contain;
   background-origin: border-box;
+}
+
+// ==================поле кнопки Отправить
+.form-field-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
