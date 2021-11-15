@@ -45,6 +45,7 @@
 
   &:focus {
     border: 1px solid #2196f3;
+    outline: none;
     border-radius: 4px;
     cursor: pointer;
   }
@@ -108,13 +109,14 @@
   margin-right: 10px;
   border: 2px solid #212121;
   border-radius: 2px;
-}
-.modal-form__checkbox:checked + .modal-form__icon-checkbox {
-  background-color: var(--acсent-background-color);
-  border-color: var(--acсent-background-color);
-  background-image: url(../images/check-icon.svg);
-  background-size: contain;
-  background-origin: border-box;
+
+  .modal-form__checkbox:checked + & {
+    background-color: var(--acсent-background-color);
+    border-color: var(--acсent-background-color);
+    background-image: url(../images/check-icon.svg);
+    background-size: contain;
+    background-origin: border-box;
+  }
 }
 
 // ==================поле кнопки Отправить

@@ -104,10 +104,13 @@
   background-color: inherit;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    color: #ffffff;
+    outline: none;
+  }
 }
-.page-footer__input:focus {
-  color: #ffffff;
-}
+
 .page-footer__subscribe-btn {
   display: flex;
   align-items: center;
@@ -115,4 +118,6 @@
 }
 .page-footer__subscribe-icon {
   margin-left: 10px;
+  width: 24px;
+  height: 24px;
 }
