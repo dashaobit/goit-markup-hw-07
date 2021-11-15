@@ -11,10 +11,11 @@
 
   transform: translate(-50%, -50%) scale(1);
   transition: transorm 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.backdrop.is-hidden .modal__box {
-  /* когда бекдроп спрятан, мы чтото применяем к .modal-box */
-  transform: translate(-50%, -50%) scale(0.9);
+
+  .backdrop.is-hidden & {
+    /* когда бекдроп спрятан, мы чтото применяем к .backdrop-box */
+    transform: translate(-50%, -50%) scale(0.9);
+  }
 }
 
 //===============кнопка закрытия модального окна

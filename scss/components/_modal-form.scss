@@ -43,11 +43,6 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  &:focus ~ .icon-modal {
-    fill: var(--primary-background-color);
-  }
-/* когда  .form-input в ховере, то все СОСЕДИ внизу него внутри div 
-(вниз на одном уровне) меняют цвет*/
   &:focus {
     border: 1px solid #2196f3;
     border-radius: 4px;
@@ -65,6 +60,12 @@
   transform: translateY(-50%);
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .modal-form__input:focus ~ & {
+    fill: var(--primary-background-color);
+    /* когда  .modal-form__input в ховере, то все СОСЕДИ внизу него внутри div 
+(вниз на одном уровне) меняют цвет*/
+  }
 }
 
 // ==================поле Введите комментарий
@@ -73,8 +74,8 @@
   height: 120px;
   resize: none;
 
-    &::placeholder {
-      color: rgba(117, 117, 117, 0.5);
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
   }
 }
 
