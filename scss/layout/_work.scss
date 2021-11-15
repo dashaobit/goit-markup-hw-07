@@ -8,9 +8,10 @@
 .work-item {
   position: relative;
   margin-right: 30px;
-}
-.work-item:last-child {
-  margin-right: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 //=====контейнер с текстом на картинке

@@ -8,12 +8,11 @@
 
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &.is-hidden {
+    opacity: 0; /* скрывает backdrop */
+    pointer-events: none; /* будет ли влиять на элемент событие указателя (мышки) - не будет. Т.е.екликаем сквозь бэкдроп*/
+  }
 }
-.backdrop.is-hidden {
-  opacity: 0; /* скрывает backdrop */
-  pointer-events: none; /* будет ли влиять на элемент событие указателя (мышки) - не будет. Т.е.екликаем сквозь бэкдроп*/
-}
-.backdrop.is-hidden .modal-box {
-  /* когда бекдроп спрятан, мы чтото применяем к .modal-box */
-  transform: translate(-50%, -50%) scale(0.9);
-}
+
+

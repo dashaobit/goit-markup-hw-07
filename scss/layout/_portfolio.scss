@@ -52,14 +52,6 @@
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
-
-  &:hover .overlay-box::before,
-  &:focus .overlay-box::before,
-  &:hover .overlay-text,
-  &:focus .overlay-text {
-    transform: translateY(0); /* оверлей ПОСРЕДИ картинки */
-  }
-  /* при ховере на ссылку - возми overlay-box::before и сделай его непрозрачным opacity: 1 */
 }
 
 .examples-box {
@@ -84,6 +76,12 @@
 
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
       transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .examples-link:hover &,
+    .examples-link:focus & {
+      transform: translateY(0); /* оверлей ПОСРЕДИ картинки */
+    }
+    /* при ховере на ссылку - возми overlay-box::before и сделай его непрозрачным opacity: 1 */
   }
 }
 
@@ -105,4 +103,9 @@
 
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .examples-link:hover &,
+  .examples-link:focus & {
+    transform: translateY(0); /* оверлей ПОСРЕДИ картинки */
+  }
 }

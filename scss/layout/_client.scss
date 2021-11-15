@@ -6,10 +6,12 @@
   width: 170px;
   height: 92px;
   margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
-.client-item:last-child {
-  margin-right: 0;
-}
+
 .client-link {
   display: flex;
   align-items: center;
@@ -21,9 +23,9 @@
 
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:hover,
-    &:focus {
-      border: 1px solid var(--acсent-text-color);
+  &:hover,
+  &:focus {
+    border: 1px solid var(--acсent-text-color);
   }
 }
 
@@ -34,9 +36,8 @@
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:hover .client-icon,
-    &:focus .client-icon {
-      fill: var(--acсent-text-color);
+  .client-link:hover &,
+  .client-link:focus & {
+    fill: var(--acсent-text-color);
   }
 }
-
