@@ -1,11 +1,11 @@
-.work-section {
+.work {
   padding-top: 0;
 }
-.work-list {
+.work__list {
   display: flex;
   /* justify-content: space-between; */
 }
-.work-item {
+.work__item {
   position: relative;
   margin-right: 30px;
 
@@ -15,7 +15,7 @@
 }
 
 //=====контейнер с текстом на картинке
-.work-box {
+.work__box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +31,7 @@ top: 50%;  - это % от РОДИТЕЛЯ
 left: 50%;  - это % от РОДИТЕЛЯ
 transform: translate (-50%, -50%) – это % СВОЕЙ ширины (ширины РЕБЕНКА)  */
 
-.work-text {
+.work__text {
   color: var(--white-text-color);
   font-weight: 700;
   line-height: 1.14;

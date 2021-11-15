@@ -1,5 +1,5 @@
 // =========текст Оставьте свои данные
-.modal-box-text {
+.modal-form__box-text {
   display: block;
   margin-bottom: 12px;
   font-weight: 500;
@@ -17,22 +17,26 @@
   margin-right: auto;
 }
 
-.form-field {
+.modal-form__form-field {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
   /* outline: none; */
 }
-.form-field-forth {
+.modal-form__form-field-forth {
   margin-bottom: 0;
 }
-.form-label {
+.modal-form__label {
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
-.form-input {
+.modal-form__box-input {
+  /* width: 100%;  */
+  position: relative;
+}
+.modal-form__input {
   width: 448px;
   height: 40px;
   padding-left: 30px;
@@ -50,11 +54,8 @@
     cursor: pointer;
   }
 }
-.box-input {
-  /* width: 100%;  */
-  position: relative;
-}
-.icon-modal {
+
+.modal-form__icon {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -67,7 +68,7 @@
 }
 
 // ==================поле Введите комментарий
-.form-textarea {
+.modal-form__textarea {
   padding: 12px 16px;
   height: 120px;
   resize: none;
@@ -78,28 +79,28 @@
 }
 
 // ==================поле Соглашаюсь с Условиями договора
-.form-field-policy {
+.modal-form__field-policy {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
   margin-top: 20px;
 }
-.link-contract {
+.modal-form__link-contract {
   text-decoration-line: underline;
   color: var(--acсent-text-color);
 }
 
 //============ квадратик Я соглашаюсь с Условиями договора
-.checkbox {
+.modal-form__checkbox {
   position: absolute;
   appearance: none;
   -webkit-appearance: none;
 }
-.label-checkbox {
+.modal-form__label-checkbox {
   display: block;
 }
-.icon-checkbox {
+.modal-form__icon-checkbox {
   display: block;
   width: 16px;
   height: 15px;
@@ -107,7 +108,7 @@
   border: 2px solid #212121;
   border-radius: 2px;
 }
-.checkbox:checked + .icon-checkbox {
+.modal-form__checkbox:checked + .modal-form__icon-checkbox {
   background-color: var(--acсent-background-color);
   border-color: var(--acсent-background-color);
   background-image: url(../images/check-icon.svg);
@@ -116,7 +117,7 @@
 }
 
 // ==================поле кнопки Отправить
-.form-field-btn {
+.modal-form__field-btn {
   display: flex;
   align-items: center;
   justify-content: center;

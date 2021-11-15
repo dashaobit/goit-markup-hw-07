@@ -1,24 +1,21 @@
-.team-section {
+.team {
   background-color: var(--secondary-background-color);
 }
-.team-list-title {
-  margin-bottom: 10px;
-  font-size: 16px;
-  line-height: 1.19;
-}
-.team-list {
+.team__list {
   display: flex;
   /* justify-content: space-between; */
 }
-.team-item {
+.team__item {
   margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
-.team-item:last-child {
-  margin-right: 0;
-}
+
 /* ---------div под фоткой---------- */
 
-.team-box {
+.team__box {
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
@@ -27,15 +24,19 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-
+.team__list-title {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.19;
+}
 /* -----------team icon------------ */
 
-.icon-list-team {
+.team__list-icon {
   display: flex;
   justify-content: center;
   margin-top: 16px;
 }
-.icon-item-team {
+.team__item-icon {
   width: 44px;
   height: 44px;
   margin-right: 10px;
@@ -45,7 +46,7 @@
   }
 }
 
-.icon-link-team {
+.team__link-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,15 +62,15 @@
   }
 }
 
-.icon-team {
+.team__icon {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  .icon-link-team:hover &,
-  .icon-link-team:focus & {
+  .team__link-icon:hover &,
+  .team__link-icon:focus & {
     fill: #ffffff;
   }
 }
