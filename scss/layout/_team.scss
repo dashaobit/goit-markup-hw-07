@@ -1,7 +1,7 @@
-.team {
+.section-team {
   background-color: var(--secondary-background-color);
 }
-.team__list {
+.team {
   display: flex;
   /* justify-content: space-between; */
 }
@@ -29,14 +29,14 @@
   font-size: 16px;
   line-height: 1.19;
 }
-/* -----------team icon------------ */
+// ========== иконки соцсетей
 
-.team__list-icon {
+.social {
   display: flex;
   justify-content: center;
   margin-top: 16px;
 }
-.team__item-icon {
+.social__item {
   width: 44px;
   height: 44px;
   margin-right: 10px;
@@ -46,7 +46,7 @@
   }
 }
 
-.team__link-icon {
+.social__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,15 +62,15 @@
   }
 }
 
-.team__icon {
+.social__icon {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  .team__link-icon:hover &,
-  .team__link-icon:focus & {
+  .social__link:hover &,
+  .social__link:focus & {
     fill: #ffffff;
   }
 }
